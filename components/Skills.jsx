@@ -65,7 +65,7 @@ const Skills = () => {
 							<div className='grid gap-10 my-10 grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
 								{frontendskills.map((item, index) => (
 									<div className='rounded-full ' key={index}>
-										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  flex items-center justify-center'>
+										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  shadow-md   flex items-center justify-center'>
 											<img
 												className='w-10 h-auto object-cover  '
 												src={item.skill_image}
@@ -81,7 +81,7 @@ const Skills = () => {
 							<div className='grid gap-10 my-10 grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
 								{backendskills.map((item, index) => (
 									<div className='rounded-full ' key={index}>
-										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  flex items-center justify-center'>
+										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  shadow-md  flex items-center justify-center'>
 											<img
 												className='w-10 h-auto object-cover  '
 												src={item.skill_image}
@@ -97,7 +97,7 @@ const Skills = () => {
 							<div className='grid gap-10 my-10 grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
 								{otherskills.map((item, index) => (
 									<div className='rounded-full' key={index}>
-										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  flex items-center justify-center'>
+										<div className='h-20 w-20 md:h-16 md:w-16 my-3 rounded-full bg-gray-100  shadow-md  flex items-center justify-center'>
 											<img
 												className='w-12 h-auto object-cover  '
 												src={item.skill_image}

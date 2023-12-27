@@ -56,10 +56,10 @@ export default () => {
 								color='gray'
 								className='group relative'
 							>
-								<Link href='#' className='flex items-center'>
+								<a className='flex items-center'>
 									<Video className='transition-transform transform translate-x-0 group-hover:scale-90' />
 									Editing Portfolio
-								</Link>
+								</a>
 							</Button>
 						</div>
 						{/* Down Arrow */}
