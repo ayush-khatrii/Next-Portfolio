@@ -18,7 +18,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='sticky top-0  transform w-full border-b border-[#ffffff10] z-40 border-default bg-[#101211]   transition-opacity'>
+		<nav className=' top-0  transform w-full border-b border-[#ffffff10] z-40 border-default   transition-opacity'>
 			<div className='items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8'>
 				<div className='flex items-center justify-between py-3 md:py-3 md:block'>
 					<Link href='/' className='font-bold text-2xl'>
