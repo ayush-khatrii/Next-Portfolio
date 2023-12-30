@@ -1,6 +1,8 @@
-import "../styles/globals.css";
+import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
+import { Analytics } from "@vercel/analytics/react";
+import Head from "./head";
 
 export const metadata = {
 	title: "Ayush Khatri | Portfolio",
@@ -11,11 +13,12 @@ export const metadata = {
 const RootLayout = ({ children }) => {
 	return (
 		<html lang='en' suppressHydrationWarning>
+			<Head />
 			<body className='dark'>
 				<main>
 					<Theme accentColor='green'>{children}</Theme>
-				</main>{" "}
-				rai
+				</main>
+				<Analytics />
 			</body>
 		</html>
 	);
