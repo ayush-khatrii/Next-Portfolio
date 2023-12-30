@@ -19,6 +19,10 @@ const executeReload = () => {
 	window.location.reload();
 };
 
+const handleTerminalClick = (event) => {
+	event.preventDefault();
+};
+
 const Terminal = () => {
 	return (
 		<section
@@ -30,7 +34,10 @@ const Terminal = () => {
 			</Heading>
 			<Container size={"4"}>
 				<TerminalContextProvider>
-					<div className='border w-full mx-auto shadow-sm outline-none h-[25rem] text-xs '>
+					<div
+						onClick={handleTerminalClick}
+						className='border w-full mx-auto shadow-sm outline-none h-[25rem] text-xs '
+					>
 						<ReactTerminal
 							welcomeMessage={
 								<div>
@@ -44,7 +51,7 @@ const Terminal = () => {
 									<span className='text-base py-3'>
 										My name is Ayush Khatri . I'm a BCA student who loves
 										building web apps with latest technologies. My portfolio
-										showcases various cool projects!", projects:
+										showcases various cool projects!"
 									</span>
 								),
 
