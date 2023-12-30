@@ -14,10 +14,7 @@ const allCommands = [
 
 const Terminal = () => {
 	return (
-		<section
-			id='terminal'
-			className={` my-10 mx-10 ${source_code_pro.className}`}
-		>
+		<section className={` my-10 mx-10 ${source_code_pro.className}`}>
 			<h1 className='text-center mb-2'>Terminal</h1>
 			<Container size={"4"}>
 				<TerminalContextProvider>

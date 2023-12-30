@@ -20,7 +20,7 @@ const page = () => {
 				<Skills />
 				<Projects />
 				<Articles />
-				{/* <Terminal /> */}
+				<Terminal />
 				<Contact />
 				<Footer />
 			</div>
