@@ -16,11 +16,11 @@ const page = () => {
 			<div className={`${poppins.className}`}>
 				<Navbar />
 				<Hero />
+				<Terminal />
 				<About />
 				<Skills />
 				<Projects />
 				<Articles />
-				<Terminal />
 				<Contact />
 				<Footer />
 			</div>

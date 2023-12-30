@@ -65,7 +65,7 @@ export default () => {
 						{/* Down Arrow */}
 						<div className='arrow-down my-20 animate-bounce'>
 							<Card asChild>
-								<Link href='#about'>
+								<Link href='#terminal'>
 									<ArrowDown />
 								</Link>
 							</Card>
