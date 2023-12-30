@@ -11,12 +11,11 @@ export const metadata = {
 const RootLayout = ({ children }) => {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<body>
+			<body className='dark'>
 				<main>
-					<Theme accentColor='green' appearance='dark'>
-						{children}
-					</Theme>
-				</main>
+					<Theme accentColor='green'>{children}</Theme>
+				</main>{" "}
+				rai
 			</body>
 		</html>
 	);

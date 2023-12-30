@@ -8,19 +8,19 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Terminal from "@/components/Terminal";
 import Articles from "@/components/Articles";
-import { poppins } from "@/fonts/font"
+import { poppins } from "@/fonts/font";
 
 const page = () => {
 	return (
 		<>
-			<div className={ `${poppins.className}` }>
+			<div className={`${poppins.className}`}>
 				<Navbar />
 				<Hero />
 				<About />
 				<Skills />
 				<Projects />
 				<Articles />
-				<Terminal />
+				{/* <Terminal /> */}
 				<Contact />
 				<Footer />
 			</div>
