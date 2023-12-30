@@ -4,6 +4,10 @@ const Head = () => {
 	return (
 		<>
 			<meta charset='UTF-8' />
+			<meta
+				name='google-site-verification'
+				content='gE7bK5UpLNwVVgfoPcGbMkq2qEWOTZG2Xv90n1VRpho'
+			/>
 			<link rel='icon' href='/logo.jpg' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			<meta name='title' content='Ayush Khatri | Portfolio' />
