@@ -10,7 +10,6 @@ const Head = () => {
 			/>
 			<link rel='icon' href='/aklogo.png' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-			<meta name='title' content='Portfolio | Ayush Khatri' />
 			<meta
 				name='description'
 				content='I am Ayush Khatri, a 20-year-old  BCA student based in gandhidham specializing in web development. Currently learning MERN stack development.'
