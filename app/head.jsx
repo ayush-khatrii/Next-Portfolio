@@ -1,6 +1,7 @@
 import React from "react";
 
 const Head = () => {
+	console.log("");
 	return (
 		<>
 			<meta charset='UTF-8' />
@@ -32,7 +33,7 @@ const Head = () => {
 			/>
 			<meta
 				property='og:image'
-				content='https://jigarsable.vercel.app/portfolio-fork.png'
+				content='https://res.cloudinary.com/drnxxavv4/image/upload/v1703942076/portfolio/profile/hidl83ei9gflofmnelcy.jpg'
 			/>
 			<meta
 				property='twitter:description'
