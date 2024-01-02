@@ -33,7 +33,7 @@ const Head = () => {
 			/>
 			<meta
 				property='og:image'
-				content='https://res.cloudinary.com/drnxxavv4/image/upload/v1703942076/portfolio/profile/hidl83ei9gflofmnelcy.jpg'
+				content='https://res.cloudinary.com/drnxxavv4/image/upload/v1704214524/portfolio/profile/mmqhckhueon99dbq4n5z.png'
 			/>
 			<meta
 				property='twitter:description'
