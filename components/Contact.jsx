@@ -69,7 +69,7 @@ const Contact = () => {
 						/>
 					</TextField.Root>
 					<TextArea required size='3' name='message' placeholder='Messages' />
-					<Button variant='classic' size='3' my='3'>
+					<Button variant='solid' size='3' my='3'>
 						Send
 					</Button>
 					<ToastContainer />

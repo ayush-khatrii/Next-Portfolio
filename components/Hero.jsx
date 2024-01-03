@@ -9,22 +9,23 @@ import Typewriter from "typewriter-effect";
 export default () => {
 	return (
 		<>
-			<Container size={"4"} className={`pt-40 md:pt-36 h-screen z-40 `}>
-				<div className=' mx-auto flex items-center gap-x-12  justify-center  overflow-hidden md:flex md:px-8'>
+			<Container size={"4"} className={`pt-40  h-screen z-40 `}>
+				<div className=' mx-auto flex items-center justify-center  overflow-hidden md:flex md:px-8'>
 					<div className='  px-4 mx-auto flex flex-col justify-center items-center sm:max-w-lg md:px-0 lg:max-w-5xl'>
 						<h1
 							color='gray'
-							className=' sm:text-xl py-2 text-center font-thin  md:text-4xl lg:text-5xl text-2xl '
+							className=' text-center font-thin  md:text-4xl  text-2xl '
 						>
 							Hi! I am
 						</h1>
 						<Text
-							color='green'
+							color='gray'
+							highContrast
 							className='text-center text-4xl sm:text-7xl lg:text-7xl font-semibold'
 						>
 							Ayush Khatri
 						</Text>
-						<span className='flex justify-center items-center '>
+						<Link className='flex justify-center items-center '>
 							<Typewriter
 								options={{
 									strings: ["Web Developer", "Coder", "Video Editor"],
@@ -32,7 +33,7 @@ export default () => {
 									loop: true,
 								}}
 							/>
-						</span>
+						</Link>
 						{/* Socials D*/}
 						<div className='mt-5'>
 							<Socials />

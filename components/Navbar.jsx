@@ -45,7 +45,7 @@ const Navbar = () => {
 								<li
 									onClick={closeNavbar}
 									key={idx}
-									className=' hover:text-[#30a46c]  text-sm transition-all ease-in duration-100'
+									className=' hover:text-[#cfcfcfa9]  text-sm transition-all ease-out duration-100'
 								>
 									<Link href={item.path} className='block'>
 										{item.title}
@@ -75,6 +75,7 @@ const Navbar = () => {
 							<li>
 								<Button
 									asChild
+									variant='solid'
 									onClick={closeNavbar}
 									size={{
 										initial: "3",

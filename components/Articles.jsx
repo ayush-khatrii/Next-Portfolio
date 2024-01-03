@@ -1,6 +1,6 @@
 "use client";
 import databaseService from "@/appwrite/databaseService";
-import { Card, Container, Heading, Inset, Text } from "@radix-ui/themes";
+import { Card, Container, Heading, Inset, Link, Text } from "@radix-ui/themes";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -38,13 +38,15 @@ const Articles = () => {
 								<Text as='div' color='gray' size='2' my='3'>
 									{item.blogdesc}
 								</Text>
-								<a
-									href={item.bloglink}
-									className='flex group mt-4 justify-self-center items-center text-green-400'
-								>
-									Read More
-									<ChevronRight className='transition-transform transform translate-x-0 group-hover:translate-x-1' />
-								</a>
+								<Link underline="none">
+									<a
+										href={item.bloglink}
+										className='flex group mt-4 justify-self-center items-center '
+									>
+										Read More
+										<ChevronRight className='transition-transform transform translate-x-0 group-hover:translate-x-1' />
+									</a>
+								</Link>
 							</Inset>
 						</Card>
 					))}

@@ -10,7 +10,7 @@ import {
 	Tabs,
 	Text,
 } from "@radix-ui/themes";
-import { ArrowUpRight, MoveUpRight } from "lucide-react";
+import { ArrowBigRight, ArrowRightIcon, ArrowUpRight, MoveUpRight, Video } from "lucide-react";
 import databaseService from "@/appwrite/databaseService";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -85,12 +85,12 @@ const About = () => {
 								>
 									<Link href={item.resume}>Resume</Link>
 								</Button>
-								<Button asChild variant='classic' size='3' my='3'>
+								<Button asChild vvariant='solid' size='3' my='3' className='group relative'>
 									<Link
 										target='_blank'
 										href='https://ayushkhatri.hashnode.dev/'
 									>
-										Blog <ArrowUpRight />
+										Blog <ArrowRightIcon className='transition-transform transform translate-x-0 group-hover:translate-x-1' />
 									</Link>
 								</Button>
 							</Tabs.Content>
