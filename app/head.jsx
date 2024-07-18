@@ -20,6 +20,7 @@ const Head = () => {
 			<link rel='canonical' href='https://ayushkhatri.vercel.app' />
 			<meta name='language' content='English' />
 			<meta name='twitter:card' content='summary' />
+			<meta name="google-site-verification" content="gE7bK5UpLNwVVgfoPcGbMkq2qEWOTZG2Xv90n1VRpho" />
 		</>
 	);
 };
