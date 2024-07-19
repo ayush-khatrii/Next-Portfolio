@@ -1,6 +1,6 @@
 export default function sitemap() {
 
-    const baseUrl = "https://ayushkhatri.vercel.app/";
+    const baseUrl = "https://ayushkhatri.site/";
 
     return [
         {
