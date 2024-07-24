@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://ayushkhatri.vercel.app/
+Sitemap: https://ayushkhatri.site
