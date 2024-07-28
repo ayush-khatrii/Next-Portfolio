@@ -1,4 +1,3 @@
-import Header from "@/components/Navbar";
 import About from "@/pages/About";
 import Experience from "@/pages/Experience";
 import HomePage from "@/pages/Home";

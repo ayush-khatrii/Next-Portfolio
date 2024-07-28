@@ -1,7 +1,5 @@
 "use client"
 import { Tabs, Tab, Button } from "@nextui-org/react";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gredient";
-import Socials from "@/components/Socials";
 
 const About = () => {
   return (
@@ -35,9 +33,6 @@ const About = () => {
         </Tabs>
         <div className="flex justify-center items-center text-xl gap-5 mb-5">
           <h1>My Links </h1>
-          <div className="flex justify-center items-center gap-5">
-            <Socials />
-          </div>
           <Button radius="full" size="lg" className="bg-gradient-to-tr font-medium  from-purple-950 to-violet-800 text-white shadow-lg">Resume</Button>
         </div>
       </div>
