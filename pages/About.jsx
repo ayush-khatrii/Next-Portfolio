@@ -36,7 +36,7 @@ const About = () => {
           <Button radius="full" size="lg" className="bg-gradient-to-tr font-medium  from-purple-950 to-violet-800 text-white shadow-lg">Resume</Button>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

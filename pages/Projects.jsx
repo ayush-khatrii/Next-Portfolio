@@ -6,7 +6,7 @@ import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { projectsData } from "@/constants";
 import { Button, Chip } from "@nextui-org/react";
 
-export function Projects() {
+export default function Projects() {
   const [active, setActive] = useState(null);
   const id = useId();
   const ref = useRef(null);
