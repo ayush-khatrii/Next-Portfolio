@@ -1,6 +1,5 @@
 "use client"
 import { Tabs, Tab, Button } from "@nextui-org/react";
-
 const About = () => {
   return (
     <section id="about" className="my-10 max-w-4xl px-5 mx-auto dark:text-white flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">

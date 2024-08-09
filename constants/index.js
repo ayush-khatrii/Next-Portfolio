@@ -92,7 +92,7 @@ export const backendTechStack = [
 export const experience = [
   {
     id: "mgcorp",
-    label: "MG Corp",
+    label: "Preeti Agri Farms",
     position: "Frontend Developer",
     link: "#",
     date: "May - June 2024",

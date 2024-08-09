@@ -1,8 +1,9 @@
-import About from "@/pages/About";
-import Experience from "@/pages/Experience";
-import HomePage from "@/pages/Home";
-import Projects from "@/pages/Projects";
-import Skills from "@/pages/Skills";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import HomePage from "@/components/Home";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 export default function page() {
 
   return (
@@ -13,6 +14,7 @@ export default function page() {
         <Skills />
         <Experience />
         <Projects />
+        <Contact />
       </div>
     </>
   );
