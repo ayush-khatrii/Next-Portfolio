@@ -9,7 +9,7 @@ export async function POST(request) {
     const { data, error } = await resend.emails.send({
       from: process.env.NEXT_PUBLIC_FROM_MAIL,
       to: process.env.NEXT_PUBLIC_TO_MAIL,
-      subject: 'Hello world',
+      subject: 'Hello Ayush I want to contact you.',
       react: <Email fromName={fromName} fromEmail={fromEmail} content={content} />
 
     });
