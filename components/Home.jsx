@@ -26,15 +26,18 @@ export default function HomePage() {
           <p className="text-6xl sm:text-9xl font-black relative bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4 ">
             Ayush Khatri
           </p>
-          <p className="pt-2 w-fit px-8 sm:w-5/12 dark:text-gray-100 font-medium text-center text-foreground text-lg sm:text-2xl">
+          <p className="pt-2 w-fit px-8 sm:w-5/12 dark:text-zinc-400 text-zinc-800 font-medium text-center text-lg sm:text-2xl">
             Passionate about learning new techs, creating new projects, building web apps that always impress.
           </p>
           <div className="flex justify-center items-center text-xl gap-3 mt-5">
             <a href="#about">
-              <Button radius="full" size="lg" variant="shadow" className="bg-gradient-to-tr font-medium text-xl from-purple-950 to-violet-800 text-white shadow-lg">Explore</Button>
+              <Button radius="sm" size="lg" className="bg-zinc-900 text-xl font-medium">Explore</Button>
             </a>
             <a target="_blank" href="https://ayushkhatri.hashnode.dev">
-              <Button radius="full" size="lg" className="dark:bg-white dark:text-black font-medium text-xl">Blog</Button>
+              <Button radius="sm" size="lg"
+                variant="bordered"
+                className="font-medium text-xl"
+              >Blog</Button>
             </a>
           </div>
         </div>

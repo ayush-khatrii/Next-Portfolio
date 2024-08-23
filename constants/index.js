@@ -1,34 +1,73 @@
 import { IoLogoCss3, IoLogoGithub, IoLogoHtml5, IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
-import { FaBootstrap, FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { FaBootstrap, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiSocketdotio, SiTypescript } from "react-icons/si";
 import { SiShadcnui, SiExpress, SiAppwrite } from "react-icons/si";
-import { BiLogoMongodb } from "react-icons/bi";
+import { BiLogoMongodb, BiLogoTailwindCss } from "react-icons/bi";
 import { VscVscode } from "react-icons/vsc";
+import { FaReact } from "react-icons/fa";
 
 export const projectsData = [
   {
-    title: "Full Stack Hotel Booking Web App",
-    description: "Ayush Khatri",
-    src: "https://placehold.co/400",
-    ctaText: "Visit",
-    liveLink: "https://ui.aceternity.com/templates",
-    repoText: "Code",
-    githubLink: "https://ui.aceternity.com/templates",
-    stack: ["React.js", "Javascript", "MongoDB", "Express.js", "Node.js", "Razorpay"],
-    content: () => {
-      return (
-        <p className="text-xl">
-          Developed a fullstack booking website allowing users to create accounts, search and book rooms, and make
-          payments using the Razorpay API.
-          Integrated features such as user authentication, account management, and a comprehensive search functionality for
-          finding available rooms.
-          Implemented an admin dashboard for managing bookings, users, and rooms, providing comprehensive tools for
-          administrative tasks.
-          Added a feature for end users to review rooms, enhancing user engagement and providing valuable feedback for
-          room management.
-        </p>
-      );
-    },
+    title: "Discuss-It Chat App",
+    description: "Developed a fullstack booking website allowing users to create accounts, search and book rooms, and make          payments using the Razorpay API.",
+    imgUrl: "https://placehold.co/400",
+    liveLink: "https://github.com/ayush-khatrii",
+    githubLink: "https://ayushkhatri.site",
+    stack: [
+      {
+        icon: <FaReact size={20} />,
+        name: "React.js",
+      },
+      {
+        icon: <FaNodeJs size={20} />,
+        name: "Node.js",
+      },
+      {
+        icon: <SiMongodb size={20} />,
+        name: "MongoDB",
+      },
+      {
+        icon: <SiExpress size={20} />,
+        name: "Express",
+      },
+      {
+        icon: <BiLogoTailwindCss size={20} />,
+        name: "tailwindcss",
+      },
+      {
+        icon: <SiSocketdotio size={20} />,
+        name: "socketio",
+      }
+    ],
+  },
+  {
+    title: "Hotel Booking App",
+    description: " Developed a fullstack booking website allowing users to create accounts, search and book rooms, and make          payments using the Razorpay API.",
+    imgUrl: "https://placehold.co/400",
+    liveLink: "https://github.com/ayush-khatrii",
+    githubLink: "https://ayushkhatri.site",
+    stack: [
+      {
+        icon: <FaReact size={20} />,
+        name: "React.js",
+      },
+      {
+        icon: <FaNodeJs size={20} />,
+        name: "Node.js",
+      },
+      {
+        icon: <SiMongodb size={20} />,
+        name: "MongoDB",
+      },
+      {
+        icon: <SiExpress size={20} />,
+        name: "Express",
+      },
+      {
+        icon: <BiLogoTailwindCss size={20} />,
+        name: "tailwindcss",
+      }
+    ],
   },
 ];
 export const frontendTechStack = [

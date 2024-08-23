@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="max-w-5xl my-20 mx-auto">
+    <section className="max-w-5xl h-screen mx-auto">
       <h1 className='text-center text-gray-300 font-bold text-2xl py-10'>Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4 p-5 max-w-5xl mx-auto">
@@ -51,7 +51,7 @@ const Contact = () => {
             onChange={(e) => setFromName(e.target.value)}
             required
             autoComplete="on"
-            className="w-full p-3 bg-neutral-950 text-2xl border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full p-3 bg-neutral-950 text-2xl border border-zinc-700  rounded-lg "
             type="text"
             placeholder="Enter your Name"
           />
@@ -60,7 +60,7 @@ const Contact = () => {
             value={fromEmail}
             onChange={(e) => setFromEmail(e.target.value)}
             required
-            className="w-full p-3  bg-neutral-950 text-2xl border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full p-3  bg-neutral-950 text-2xl border border-zinc-700  rounded-lg "
             type="email"
             placeholder="Enter your Email"
           />
@@ -69,7 +69,7 @@ const Contact = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             required
-            className="w-full bg-neutral-950 p-3 text-2xl border border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full bg-neutral-950 p-3 text-2xl border border-zinc-700 rounded-lg"
             placeholder="Enter your message"
             rows="5"
           ></textarea>
@@ -77,9 +77,10 @@ const Contact = () => {
             type="submit"
             radius="sm"
             size="lg"
+            variant="bordered"
+            className="bg-zinc-900 hover:bg-zinc-800 "
             isLoading={isLoading}
             disabled={isLoading}
-            className="bg-gradient-to-tr font-medium text-xl from-purple-950 to-violet-800 text-white"
           >
             Send Message
           </Button>
