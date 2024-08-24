@@ -1,10 +1,13 @@
 import { IoLogoCss3, IoLogoGithub, IoLogoHtml5, IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
 import { FaBootstrap, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiSocketdotio, SiTypescript } from "react-icons/si";
+import { SiMinutemailer, SiMongodb, SiNextdotjs, SiSocketdotio, SiTypescript } from "react-icons/si";
 import { SiShadcnui, SiExpress, SiAppwrite } from "react-icons/si";
 import { BiLogoMongodb, BiLogoTailwindCss } from "react-icons/bi";
-import { VscVscode } from "react-icons/vsc";
+import { VscJson, VscVscode } from "react-icons/vsc";
 import { FaReact } from "react-icons/fa";
+import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
+import { RiTwitterXLine } from "react-icons/ri";
+import { IoLocationSharp } from "react-icons/io5";
 
 export const projectsData = [
   {
@@ -39,6 +42,19 @@ export const projectsData = [
         name: "socketio",
       }
     ],
+  },
+  {
+    title: "Night Node",
+    description: "Dark mode reimagined with Node.js colors — NightNode",
+    imgUrl: "https://placehold.co/400",
+    liveLink: "https://github.com/ayush-khatrii",
+    githubLink: "https://ayushkhatri.site",
+    stack: [
+      {
+        icon: <VscJson size={20} />,
+        name: "json",
+      }
+    ]
   },
   {
     title: "Hotel Booking App",
@@ -115,6 +131,10 @@ export const backendTechStack = [
     name: "MongoDB",
   },
   {
+    src: <SiNextdotjs size={50} />,
+    name: "Nextjs",
+  },
+  {
     src: <VscVscode size={50} />,
     name: "VS Code",
   },
@@ -139,3 +159,31 @@ export const experience = [
     content: `Developed a responsive business website from scratch using Next.js, ShadCN UI, and Tailwind CSS, featuring a product showcase with a list of all products and individual product pages. Optimized for SEO and integrated Google Analytics for tracking. Deployed the website on Vercel,ensuring seamless accessibility and performance.`
   },
 ];
+export const contactMe = [
+  {
+    name: "Email",
+    link: "mailto:khatriayush2003@gmail.com",
+    icon: <SiMinutemailer size={50} />,
+  },
+  {
+    name: "Insta",
+    link: "https://instagram.com/ayush.khatrii",
+    icon: <IoLogoInstagram size={50} />,
+  },
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/ayushkhatrii",
+    icon: <IoLogoLinkedin size={50} />,
+  },
+  {
+    name: "x",
+    link: "https://x.com/khatri_ayush15",
+    icon: <RiTwitterXLine size={50} />,
+  },
+  {
+    name: "Github",
+    link: "https://github.com/ayush-khatrii",
+    icon: <IoLogoGithub size={50} />,
+  },
+
+]

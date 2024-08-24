@@ -1,7 +1,8 @@
 "use client";
-import { Button } from "@nextui-org/react";
+import { contactMe } from "@/constants";
 import { useState } from "react";
 import { toast } from 'react-hot-toast';
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [fromName, setFromName] = useState("");
@@ -11,8 +12,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
     try {
+      setIsLoading(true);
       const response = await fetch("api/emails", {
         method: "POST",
         headers: {
@@ -35,58 +36,47 @@ const Contact = () => {
       setContent("");
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong: " + error.message);
+      toast.error("Something went wrong: " + error);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section className="max-w-5xl h-screen mx-auto">
-      <h1 className='text-center text-gray-300 font-bold text-2xl py-10'>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-4 p-5 max-w-5xl mx-auto">
-          <input
-            value={fromName}
-            onChange={(e) => setFromName(e.target.value)}
-            required
-            autoComplete="on"
-            className="w-full p-3 bg-neutral-950 text-2xl border border-zinc-700  rounded-lg "
-            type="text"
-            placeholder="Enter your Name"
-          />
-          <input
-            autoComplete="on"
-            value={fromEmail}
-            onChange={(e) => setFromEmail(e.target.value)}
-            required
-            className="w-full p-3  bg-neutral-950 text-2xl border border-zinc-700  rounded-lg "
-            type="email"
-            placeholder="Enter your Email"
-          />
-          <textarea
-            autoComplete="on"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            required
-            className="w-full bg-neutral-950 p-3 text-2xl border border-zinc-700 rounded-lg"
-            placeholder="Enter your message"
-            rows="5"
-          ></textarea>
-          <Button
-            type="submit"
-            radius="sm"
-            size="lg"
-            variant="bordered"
-            className="bg-zinc-900 hover:bg-zinc-800 "
-            isLoading={isLoading}
-            disabled={isLoading}
-          >
-            Send Message
-          </Button>
+    <>
+
+      <section className="max-w-5xl py-20 mx-auto">
+        <div className="text-center py-10 w-10/12 mx-auto text-zinc-300 font-bold px-3 lg:px-0 text-2xl lg:text-4xl">
+          <h1 className=''>
+            Ready to elevate your <span className="text-[#801fff]">Digital Presence </span>
+            Get in touch with me
+          </h1>
         </div>
-      </form>
-    </section>
+        <div className="px-10 flex flex-wrap flex-shrink-0 justify-center items-center text-center gap-3">
+          {
+            contactMe.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and move from 50px below
+                whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and original position
+                transition={{ duration: 0.4, ease: "easeInOut", delay: index * 0.2 }} // Adjust timing and easing
+              >
+                <div className="flex cursor-pointer justify-center items-center text-center flex-col">
+
+                  <a href={item.link && item.link} id={item.name} target="_blank" rel="noopener noreferrer">
+                    <div key={index} className="bg-gradient-to-r hover:text-violet-600 transition duration-300 ease-out from-zinc-950 to-black p-5 border border-zinc-700 rounded-lg">
+                      {item.icon}
+                    </div>
+                  </a>
+                  <label htmlFor={item.name} className="font-medium text-lg text-zinc-300">{item.name}</label>
+                </div>
+              </motion.div>
+            ))
+          }
+        </div >
+      </section >
+      <p className="text-center text-lg opacity-50 py-5">Copyright &copy; {new Date().getFullYear()} Ayush Khatri</p>
+    </>
   );
 }
 
