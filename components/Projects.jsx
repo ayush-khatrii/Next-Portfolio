@@ -33,16 +33,16 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="flex mt-5 justify-end items-center text-center gap-3">
-                      <Button variant="ghost" radius="sm">
-                        <a target="_blank" href={item.liveLink}>
-                          Visit
-                        </a>
-                      </Button>
-                      <Button variant="ghost" radius="sm">
-                        <a target="_blank" href={item.githubLink}>
-                          Github
-                        </a>
-                      </Button>
+                      <a target="_blank" href={item.liveLink}>
+                        <Button variant="ghost" radius="sm">
+                           Visit
+                        </Button>
+                      </a>
+                      <a target="_blank" href={item.githubLink}>
+                         <Button variant="ghost" radius="sm">
+                            Github
+                         </Button>
+                      </a>
                     </div>
                   </div>
                 </CardSpotlight>
