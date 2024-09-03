@@ -12,10 +12,10 @@ import { IoLocationSharp } from "react-icons/io5";
 export const projectsData = [
   {
     title: "Discuss-It Chat App",
-    description: "Developed a fullstack booking website allowing users to create accounts, search and book rooms, and make          payments using the Razorpay API.",
+    description: "Discuss-It is a chat app that lets users message in real time, manage friend requests, share files, and create groups. It's designed to make communication easy and interactive. Stay connected and collaborate with ease!",
     imgUrl: "https://placehold.co/400",
-    liveLink: "https://github.com/ayush-khatrii",
-    githubLink: "https://ayushkhatri.site",
+    liveLink: "https://discussitt.vercel.app",
+    githubLink: "https://github.com/ayush-khatrii/discussIt",
     stack: [
       {
         icon: <FaReact size={20} />,
@@ -45,10 +45,10 @@ export const projectsData = [
   },
   {
     title: "Night Node",
-    description: "Dark mode reimagined with Node.js colors — NightNode",
+    description: "NightNode - Color Theme for VS Code",
     imgUrl: "https://placehold.co/400",
-    liveLink: "https://github.com/ayush-khatrii",
-    githubLink: "https://ayushkhatri.site",
+    liveLink: "https://marketplace.visualstudio.com/items?itemName=AyushKhatri.nightnode",
+    githubLink: "https://github.com/ayush-khatrii/night-node",
     stack: [
       {
         icon: <VscJson size={20} />,
@@ -60,8 +60,8 @@ export const projectsData = [
     title: "Hotel Booking App",
     description: " Developed a fullstack booking website allowing users to create accounts, search and book rooms, and make          payments using the Razorpay API.",
     imgUrl: "https://placehold.co/400",
-    liveLink: "https://github.com/ayush-khatrii",
-    githubLink: "https://ayushkhatri.site",
+    liveLink: "https://marutihotel.netlify.app",
+    githubLink: "https://github.com/ayush-khatrii/hotel-project-FinalYear",
     stack: [
       {
         icon: <FaReact size={20} />,
