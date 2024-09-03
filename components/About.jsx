@@ -26,11 +26,11 @@ const About = () => {
                   </div>
                 </div>
               </Tab>
-              <Tab key="education" title="Education" className="text-xl">
+            {/* <Tab key="education" title="Education" className="text-xl">
                 <div className="text-left w-full">
                   Lorem ipsum dolor sit amet,
                 </div>
-              </Tab>
+              </Tab> */}
             </Tabs>
             <div className="flex lg:justify-center justify-start items-center text-xl gap-5 mb-5">
               <Button radius="sm" size="lg" className="bg-zinc-900 text-xl font-medium">
