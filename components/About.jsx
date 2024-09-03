@@ -34,7 +34,7 @@ const About = () => {
             </Tabs>
             <div className="flex lg:justify-center justify-start items-center text-xl gap-5 mb-5">
               <Button radius="sm" size="lg" className="bg-zinc-900 text-xl font-medium">
-                <a target="_blank" href="https://cloud.appwrite.io/v1/storage/buckets/66d756750000be0fadfe/files/66d756860002327aed60/view?project=667d662c00150cd5c52c&project=667d662c00150cd5c52c&mode=admin">
+                <a target="_blank" href="https://cloud.appwrite.io/v1/storage/buckets/66d756750000be0fadfe/files/66d75ef40025be82f6eb/view?project=667d662c00150cd5c52c&project=667d662c00150cd5c52c&mode=admin">
                   Resume
                 </a>
               </Button>
