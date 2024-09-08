@@ -6,8 +6,8 @@ const About = () => {
     <>
       <BackgroundBeamsWithCollision>
         <section id="about" className="py-20 max-w-4xl px-5 mx-auto dark:text-white flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
-          <div className="absoulte mb-8 md:mb-0 md:mr-10 brightness-50 hover:brightness-100 hover:-translate-y-4 transition-all ease-in-out object-cover grayscale hover:grayscale-0 border-2 ">
-{/*             <img
+{/*           <div className="absoulte mb-8 md:mb-0 md:mr-10 brightness-50 hover:brightness-100 hover:-translate-y-4 transition-all ease-in-out object-cover grayscale hover:grayscale-0 border-2 ">
+            <img
               width={500}
               src="https://res.cloudinary.com/chatappmern/image/upload/v1719329984/portfolio/profile/wo9dmqoqsxwgdulgwb8m.jpg"
               alt="Profile"
