@@ -154,7 +154,7 @@ export const experience = [
     label: "Preeti Agri Farms",
     position: "Frontend Developer",
     link: "#",
-    date: "May - June 2024",
+    date: "Jun - July 2024",
     techStack: ["Next.js", "Javascript", "Tailwind CSS"],
     content: `Developed a responsive business website from scratch using Next.js, ShadCN UI, and Tailwind CSS, featuring a product showcase with a list of all products and individual product pages. Optimized for SEO and integrated Google Analytics for tracking. Deployed the website on Vercel,ensuring seamless accessibility and performance.`
   },
