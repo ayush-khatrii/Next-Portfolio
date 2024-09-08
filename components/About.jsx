@@ -7,13 +7,13 @@ const About = () => {
       <BackgroundBeamsWithCollision>
         <section id="about" className="py-20 max-w-4xl px-5 mx-auto dark:text-white flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
           <div className="absoulte mb-8 md:mb-0 md:mr-10 brightness-50 hover:brightness-100 hover:-translate-y-4 transition-all ease-in-out object-cover grayscale hover:grayscale-0 border-2 ">
-            <img
+{/*             <img
               width={500}
               src="https://res.cloudinary.com/chatappmern/image/upload/v1719329984/portfolio/profile/wo9dmqoqsxwgdulgwb8m.jpg"
               alt="Profile"
               className="object-cover z-50"
             />
-          </div>
+          </div> */}
           <div className="flex flex-col justify-start items-start md:items-start px-2 w-full">
             <Tabs variant="underlined" className="w-full">
               <Tab key="about_me" title="About" className="text-xl">
