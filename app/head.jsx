@@ -17,6 +17,7 @@ const Head = () => {
 			<meta name='apple-mobile-web-app-title' content='Ayush Khatri - Web Developer Portfolio | Nextjs' />
 			<meta name='author' content='Ayush Khatri' />
 			<link rel='canonical' href='https://ayushkhatri.site' />
+			<link rel="icon" type="image/jpg" href="/logo-icon.jpg" />
 			<meta name='language' content='English' />
 			<meta name='twitter:card' content='summary' />
 			<meta name="google-site-verification" content="gE7bK5UpLNwVVgfoPcGbMkq2qEWOTZG2Xv90n1VRpho" />

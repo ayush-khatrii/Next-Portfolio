@@ -48,7 +48,6 @@ const Contact = () => {
       <section className="max-w-5xl py-20 mx-auto">
         <div className="text-center py-10 w-10/12 mx-auto text-zinc-300 font-bold px-3 lg:px-0 text-2xl lg:text-4xl">
           <h1 className=''>
-            Ready to elevate your <span className="text-[#801fff]">Digital Presence </span>
             Get in touch with me
           </h1>
         </div>
