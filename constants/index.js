@@ -95,23 +95,23 @@ export const projectsData = [
     githubLink: "https://github.com/ayush-khatrii/saas-ui",
     stack: [
       {
-        icon: <SiNextdotjs size={50} />,
+        icon: <SiNextdotjs size={20} />,
         name: "Nextjs",
       },
        {
-        icon: <FaReact size={50} />,
+        icon: <FaReact size={20} />,
         name: "Reactjs",
       },
       {
-        icon: <BiLogoTypescript size={50} />,
+        icon: <BiLogoTypescript size={20} />,
         name: "Typescript",
       },
       {
-        icon: <PiFramerLogoFill size={50} />,
+        icon: <PiFramerLogoFill size={20} />,
         name: "Framer-Motion",
       },
       {
-        icon: <SiShadcnui size={50} />,
+        icon: <SiShadcnui size={20} />,
         name: "shadcn-ui",
       },
     ]
