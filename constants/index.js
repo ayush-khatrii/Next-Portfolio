@@ -8,6 +8,9 @@ import { FaReact } from "react-icons/fa";
 import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoLocationSharp } from "react-icons/io5";
+import { BiLogoTypescript } from "react-icons/bi";
+import { PiFramerLogoFill } from "react-icons/pi";
+import { SiShadcnui } from "react-icons/si";
 
 export const projectsData = [
   {
@@ -84,6 +87,35 @@ export const projectsData = [
         name: "tailwindcss",
       }
     ],
+  },
+  {
+    title: "A.I Saas Landing Page",
+    description: "CodeX is a sleek, responsive SaaS landing page built with React, Next.js, Tailwind CSS, and shadcn/ui—showcasing my front-end skills with dynamic, interactive design.",
+    imgUrl: "https://placehold.co/400",
+    liveLink: "https://codex-saas.vercel.app/",
+    githubLink: "https://github.com/ayush-khatrii/saas-ui",
+    stack: [
+      {
+        icon: <SiNextdotjs size={50} />,
+        name: "Nextjs",
+      },
+       {
+        icon: <FaReact size={50} />,
+        name: "Reactjs",
+      },
+      {
+        icon: <BiLogoTypescript size={50} />,
+        name: "Typescript",
+      },
+      {
+        icon: <PiFramerLogoFill size={50} />,
+        name: "Framer-Motion",
+      },
+      {
+        icon: <SiShadcnui size={50} />,
+        name: "shadcn-ui",
+      },
+    ]
   },
 ];
 export const frontendTechStack = [
