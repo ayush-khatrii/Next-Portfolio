@@ -10,7 +10,6 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { IoLocationSharp } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 import { PiFramerLogoFill } from "react-icons/pi";
-import { SiShadcnui } from "react-icons/si";
 
 export const projectsData = [
   {
