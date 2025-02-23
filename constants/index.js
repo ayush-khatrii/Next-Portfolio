@@ -89,39 +89,10 @@ export const projectsData = [
   },
   {
     title: "A.I Saas Landing Page",
-    description: "CodeX is a sleek, responsive SaaS landing page built with React, Next.js, Tailwind CSS, and shadcn/ui—showcasing my front-end skills with dynamic, interactive design.",
-    imgUrl: "https://placehold.co/400",
-    liveLink: "https://codex-saas.vercel.app/",
-    githubLink: "https://github.com/ayush-khatrii/saas-ui",
-    stack: [
-      {
-        icon: <SiNextdotjs size={20} />,
-        name: "Nextjs",
-      },
-       {
-        icon: <FaReact size={20} />,
-        name: "Reactjs",
-      },
-      {
-        icon: <BiLogoTypescript size={20} />,
-        name: "Typescript",
-      },
-      {
-        icon: <PiFramerLogoFill size={20} />,
-        name: "Framer-Motion",
-      },
-      {
-        icon: <SiShadcnui size={20} />,
-        name: "shadcn-ui",
-      },
-    ]
-  },
-  {
-    title: "A.I Saas Landing Page",
     description: "A sleek and responsive landing page built with Next.js, Tailwind CSS, and Framer Motion for smooth animations and a modern UI",
     imgUrl: "https://placehold.co/400",
-    liveLink: "https://codex-saas.vercel.app/",
-    githubLink: "https://github.com/ayush-khatrii/saas-ui",
+    liveLink: "https://insightx-saas.vercel.app",
+    githubLink: "https://github.com/ayush-khatrii/saas-landing-page",
     stack: [
       {
         icon: <SiNextdotjs size={20} />,
