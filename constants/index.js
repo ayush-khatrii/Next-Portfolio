@@ -116,6 +116,27 @@ export const projectsData = [
       },
     ]
   },
+  {
+    title: "A.I Saas Landing Page",
+    description: "A sleek and responsive landing page built with Next.js, Tailwind CSS, and Framer Motion for smooth animations and a modern UI",
+    imgUrl: "https://placehold.co/400",
+    liveLink: "https://codex-saas.vercel.app/",
+    githubLink: "https://github.com/ayush-khatrii/saas-ui",
+    stack: [
+      {
+        icon: <SiNextdotjs size={20} />,
+        name: "Nextjs",
+      },
+       {
+        icon: <FaReact size={20} />,
+        name: "Reactjs",
+      },
+      {
+        icon: <PiFramerLogoFill size={20} />,
+        name: "Framer-Motion",
+      }
+    ]
+  },
 ];
 export const frontendTechStack = [
   {
