@@ -13,7 +13,7 @@ export const siteMetadata: Metadata = {
   openGraph: {
     title: 'Ayush Khatri - Web Developer Portfolio | Nextjs',
     description: 'Explore the portfolio of Ayush Khatri, a skilled web developer showcasing various projects and skills.',
-    url: 'https://ayushkhatri.site/',
+    url: 'https://ayushkhatri.site',
     siteName: 'Ayush Khatri Portfolio',
     locale: 'en_US',
     type: 'website',
