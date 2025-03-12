@@ -18,9 +18,9 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {project.slice(0, 3).map((item, idx) => (
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.07, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: idx * 0.2 }}
             key={idx}
             className="rounded-md overflow-hidden border border-foreground/15 flex flex-col"
           >
@@ -38,33 +38,17 @@ const Projects = () => {
               <p className="text-sm line-clamp-2 leading-relaxed font-light opacity-80 mb-6 flex-grow">
                 {item.desc}
               </p>
-
-              {/* ✅ Fix: Animate Tech Stack Properly */}
               <motion.div
                 key={idx}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { staggerChildren: 0.1, duration: 0.3 },
-                  },
-                  exit: { opacity: 0, y: 10 },
-                }}
                 className="flex flex-wrap gap-2 mb-6"
               >
                 {item.techStack &&
                   item.techStack.map((tech, techIdx) => (
                     <motion.div
                       key={techIdx}
-                      variants={{
-                        hidden: { opacity: 0, y: 10 },
-                        visible: { opacity: 1, y: 0 },
-                        exit: { opacity: 0, y: 10 },
-                      }}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: techIdx * 0.1 }}
                     >
                       <Badge variant="outline" className="rounded-md text-xs border text-foreground/85">
                         {tech}
@@ -73,7 +57,11 @@ const Projects = () => {
                   ))}
               </motion.div>
 
-              <div className="flex gap-3">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="flex gap-3">
                 {item.liveLink && (
                   <Button variant="outline" size="sm" asChild>
                     <a href={item.liveLink} target="_blank" rel="noopener noreferrer">
@@ -90,7 +78,7 @@ const Projects = () => {
                     </a>
                   </Button>
                 )}
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         ))}
