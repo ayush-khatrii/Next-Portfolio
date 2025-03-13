@@ -57,20 +57,26 @@ const Page = () => {
                   className="flex gap-3">
                   {proj.liveLink && (
                     <Button
+                      asChild
                       variant="outline"
                       size="sm"
                     >
-                      <FiLink className="h-4 w-4" />
-                      Website
+                      <a className="flex gap-1 items-center" href={proj.liveLink}>
+                        <FiLink className="h-4 w-4" />
+                        Website
+                      </a>
                     </Button>
                   )}
                   {proj.githubLink && (
                     <Button
+                      asChild
                       variant="default"
                       size="sm"
                     >
-                      <FaGithub className="h-4 w-4" />
-                      Source
+                      <a className="flex gap-1 items-center" href={proj.githubLink}>
+                        <FaGithub className="h-4 w-4" />
+                        Source
+                      </a>
                     </Button>
                   )}
                 </motion.div>
