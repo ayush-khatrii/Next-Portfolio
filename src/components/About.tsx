@@ -3,14 +3,21 @@ import { motion } from "motion/react";
 import Link from "next/link"
 import { FiExternalLink } from "react-icons/fi"
 
+// CURRENT_DATES
 const currentYear = new Date().getFullYear();
 const currentMonth = new Date().getMonth();
+const currentDay = new Date().getDate();
 
-const birthMonth = 3;
+// BIRTH_DATES
+const birthDay = 15;
+const birthMonth = 2;
 const birthYear = 2003;
 
 let age = currentYear - birthYear;
-if (currentMonth < birthMonth) age--;
+
+if (currentMonth < birthMonth || currentMonth === birthMonth && currentDay < birthDay) age--;
+
+
 const About = () => {
   return (
     <div className="pt-10 py-5">
