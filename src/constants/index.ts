@@ -38,6 +38,7 @@ title: "Issue Board",
 desc:"Engineered a comprehensive full-stack issue tracking system with GitHub OAuth",
 githubLink:"https://github.com/ayush-khatrii/issue-hub",
 liveLink:"https://issueboard.vercel.app",
+    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=issue-board",
 techStack: ["React.js","Nexts.js", "next-auth", "TailwindCSS","Prisma","Postgresql"]
 },
   {
