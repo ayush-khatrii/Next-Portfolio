@@ -33,6 +33,13 @@ const work = [
   },
 ];
 const project = [
+{
+title: "Issue Board",
+desc:"Engineered a comprehensive full-stack issue tracking system with GitHub OAuth",
+githubLink:"https://github.com/ayush-khatrii/issue-hub",
+liveLink:"https://issueboard.vercel.app",
+techStack: ["React.js","Nexts.js", "next-auth", "TailwindCSS","Prisma","Postgresql"]
+},
   {
     title: "Discuss-It Chat App",
     desc: "Discuss-It is a chat app that lets users message in real time, manage friend requests, share files, and create groups. It's designed to make communication easy and interactive. Stay connected and collaborate with ease!",
