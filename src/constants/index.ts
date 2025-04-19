@@ -46,7 +46,7 @@ const project = [
     desc: "Developed a cab booking platform with dynamic pricing and vehicle filtering based on user-selected routes. Improved user experience through smart logic and clean, responsive UI.",
     githubLink: "https://github.com/ayush-khatrii/discussIt",
     liveLink: "https://shivaysafar.com",
-    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
+    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Cab-Booking",
     techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"]
   },
   {
