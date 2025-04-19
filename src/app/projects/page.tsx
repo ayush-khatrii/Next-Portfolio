@@ -61,7 +61,7 @@ const Page = () => {
                       variant="outline"
                       size="sm"
                     >
-                      <a className="flex gap-1 items-center" href={proj.liveLink}>
+                      <a target="_blank" className="flex gap-1 items-center" href={proj.liveLink}>
                         <FiLink className="h-4 w-4" />
                         Website
                       </a>
@@ -73,7 +73,7 @@ const Page = () => {
                       variant="default"
                       size="sm"
                     >
-                      <a className="flex gap-1 items-center" href={proj.githubLink}>
+                      <a target="_blank" className="flex gap-1 items-center" href={proj.githubLink}>
                         <FaGithub className="h-4 w-4" />
                         Source
                       </a>

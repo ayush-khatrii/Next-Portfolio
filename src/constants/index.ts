@@ -45,7 +45,7 @@ const project = [
     title: "Cab Booking Web App, Shivay Safar",
     desc: "Developed a cab booking platform with dynamic pricing and vehicle filtering based on user-selected routes. Improved user experience through smart logic and clean, responsive UI.",
     githubLink: "https://github.com/ayush-khatrii/discussIt",
-    liveLink: "https://discussitt.vercel.app",
+    liveLink: "https://shivaysafar.com",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
     techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"]
   },
