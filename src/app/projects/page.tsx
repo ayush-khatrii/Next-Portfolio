@@ -40,7 +40,7 @@ const Page = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.09 }}
-                className="md:text-xl text-base font-normal">{proj.title}</motion.h1>
+                className="md:text-xl cursor-pointer text-base font-normal">{proj.title}</motion.h1>
             </AccordionTrigger>
             <AccordionContent>
               <motion.p

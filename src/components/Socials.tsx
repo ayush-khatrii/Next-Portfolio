@@ -39,12 +39,12 @@ const Socials = () => {
         </div>
         <div className="flex items-center gap-3">
           <Link href="https://ayushkhatri.hashnode.dev" target="_blank">
-            <Button variant="outline" size="sm" className="hover:scale-110 hover:px-3 transition-transform duration-200">
+            <Button variant="outline" size="sm" className="hover:scale-110 hover:px-3 cursor-pointer transition-transform duration-200">
               Blog
             </Button>
           </Link>
           <Link href="/resume-ak.pdf" target="_blank">
-            <Button variant="default" size="sm" className="hover:scale-110 hover:px-3 transition-transform duration-200">
+            <Button variant="default" size="sm" className="hover:scale-110 hover:px-3 cursor-pointer transition-transform duration-200">
               Resume
             </Button>
           </Link>

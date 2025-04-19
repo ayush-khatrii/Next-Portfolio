@@ -40,10 +40,10 @@ const GithubContribution = () => {
           blockSize={13}
           // hideColorLegend
           fontSize={12}
-          theme={{
-            light: ['#f0f5ff', '#c0dbff', '#90c2ff', '#60a8ff', '#308fff'],
-            dark: ['rgba(18 20 21 / 0.9) ', '#182840', '#203c60', '#285080', '#3279CC'],
-          }}
+          // theme={{
+          //   light: ['#f0f5ff', '#c0dbff', '#90c2ff', '#60a8ff', '#308fff'],
+          //   dark: ['rgba(18 20 21 / 0.9) ', '#182840', '#203c60', '#285080', '#3279CC'],
+          // }}
           username="ayush-khatrii"
           renderBlock={
             (block, activity) =>
@@ -57,8 +57,6 @@ const GithubContribution = () => {
           clickable
           openOnClick
           opacity={1}
-          style={{ backgroundColor: 'hsl(var(--background))', color: 'hsl(var(--foreground))' }}
-          border="0.5px solid #5e5e5e "
           arrowColor='white' id="github-tooltip" />
       </motion.div>
     </motion.section >

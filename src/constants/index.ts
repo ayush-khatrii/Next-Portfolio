@@ -34,6 +34,14 @@ const work = [
 ];
 const project = [
   {
+    title: "Cab Booking Web App, Shivay Safar",
+    desc: "Developed a cab booking platform with dynamic pricing and vehicle filtering based on user-selected routes. Improved user experience through smart logic and clean, responsive UI.",
+    githubLink: "https://github.com/ayush-khatrii/discussIt",
+    liveLink: "https://discussitt.vercel.app",
+    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
+    techStack: ["React.js", "Express.js", "Javascript", "MongoDB", "Node.js", "Socket.io", "TailwindCSS"]
+  },
+  {
     title: "Discuss-It Chat App",
     desc: "Discuss-It is a chat app that lets users message in real time, manage friend requests, share files, and create groups. It's designed to make communication easy and interactive. Stay connected and collaborate with ease!",
     githubLink: "https://github.com/ayush-khatrii/discussIt",

@@ -90,7 +90,7 @@ const Navbar = () => {
         >
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">ak</span>
+              <span className="text-background font-bold">ak</span>
             </div>
           </Link>
         </motion.div>
@@ -129,7 +129,7 @@ const Navbar = () => {
                 </Button>
               </SheetTrigger>
             </div>
-            <SheetContent side="right" className="w-[80%] sm:w-[350px]">
+            <SheetContent side="bottom" className="w-full">
               <div className="flex flex-col h-full">
                 <div className="flex-1 py-8">
                   <div className="flex flex-col space-y-4">
