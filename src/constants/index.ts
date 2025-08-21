@@ -22,14 +22,7 @@ const work = [
     position: "Freelance Web Developer",
     date: "Jan - Present 2025",
     location: "Gujarat, India",
-    content: "Developed and delivered responsive websites for clients, focusing on functionality, user experience, and performance. Completed multiple projects using modern web technologies"
-  },
-  {
-    title: "Priti Agri Farms",
-    position: "Frontend Developer",
-    location: "Gujarat, India",
-    date: "Jun - Jul 2024",
-    content: "Developed a responsive business website from scratch using Next.js, ShadCN UI, and Tailwind CSS, featuring product showcase and individual product pages."
+    content: "Developed 5+ responsive business websites using React, Next.js, and Tailwind CSS with SEO-friendly architecture, integrating Razorpay for secure online booking systems. Achieved 100/100 SEO and Best Practices on mobile Lighthouse audits through optimized structure, secure coding, and SEO best practices. Collaborated directly with 4+ clients to gather requirements, offer technical guidance, and deliver tailored web solutions that met their business needs."
   },
 ];
 const project = [
