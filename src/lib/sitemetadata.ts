@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const siteMetadata: Metadata = {
   title: "Ayush Khatri - Web Developer Portfolio",
   description: "Ayush Khatri: Web Developer Portfolio. Explore my diverse web projects and skills in creating innovative, responsive websites.",
-  metadataBase: new URL('https://ayushkhatri.site'),
+  metadataBase: new URL('https://ayushkhatri.in'),
   authors: [{ name: 'Ayush Khatri' }],
   creator: 'Ayush Khatri',
   publisher: 'Ayush Khatri',
@@ -13,7 +13,7 @@ export const siteMetadata: Metadata = {
   openGraph: {
     title: 'Ayush Khatri - Web Developer Portfolio',
     description: 'Explore the portfolio of Ayush Khatri, a skilled web developer showcasing various projects and skills.',
-    url: 'https://ayushkhatri.site',
+    url: 'https://ayushkhatri.in',
     siteName: 'Ayush Khatri Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -48,7 +48,7 @@ export const siteMetadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://ayushkhatri.site',
+    canonical: 'https://ayushkhatri.in',
   },
 
   icons: {
