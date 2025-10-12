@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ayushkhatri.site/sitemap.xml',
+    sitemap: 'https://ayushkhatri.in/sitemap.xml',
   }
 }
