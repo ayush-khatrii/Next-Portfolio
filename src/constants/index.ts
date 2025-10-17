@@ -1,30 +1,90 @@
+import { FiBriefcase } from "react-icons/fi";
+import { IconType } from "react-icons";
+import { BiMoviePlay } from "react-icons/bi";
+
 const skills = [
   {
     category: "Languages",
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "C/C++"]
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "C/C++"],
   },
   {
     category: "Libraries & Frameworks",
-    items: ["Next.js", "React.js", "Zustand", "Hono.js", "Express.js", "Node.js", "Tailwind CSS", "Zod", "React Query", "ShadCN UI"]
+    items: [
+      "Next.js",
+      "React.js",
+      "Zustand",
+      "Hono.js",
+      "Express.js",
+      "Node.js",
+      "Tailwind CSS",
+      "Zod",
+      "React Query",
+      "ShadCN UI",
+    ],
   },
   {
     category: "Databases & ORMs",
-    items: ["PostgreSQL", "MongoDB", "Prisma", "Redis"]
+    items: ["PostgreSQL", "MongoDB", "Prisma", "Redis"],
   },
   {
     category: "Dev & Ops Tools",
-    items: ["VS Code", "Docker", "Git/GitHub", "Postman", "AWS EC2"]
-  }
+    items: ["VS Code", "Git/GitHub", "Postman", "AWS EC2"],
+  },
 ];
-const work = [
+
+type WorkItem = {
+  title: string;
+  position: string;
+  date: string;
+  location: string;
+  content: string[];
+  techStack: string[];
+  icon?: IconType;
+};
+
+const work: WorkItem[] = [
   {
     title: "Self-Employed",
     position: "Freelance Web Developer",
-    date: "Jan - Present 2025",
+    date: "June 2024 – Present",
     location: "Gujarat, India",
-    content: "Developed 5+ responsive business websites using React, Next.js, and Tailwind CSS with SEO-friendly architecture, integrating Razorpay for secure online booking systems. Achieved 100/100 SEO and Best Practices on mobile Lighthouse audits through optimized structure, secure coding, and SEO best practices. Collaborated directly with 4+ clients to gather requirements, offer technical guidance, and deliver tailored web solutions that met their business needs."
+    content: [
+      "Developed 5+ responsive websites using React, Next.js, and Tailwind CSS.",
+      "Built SEO-friendly, performant architectures scoring 100/100 in Lighthouse (SEO & Best Practices).",
+      "Integrated Razorpay for secure online booking and payments.",
+      "Collaborated directly with 5+ clients to define project goals and deliver tailored web solutions.",
+    ],
+    techStack: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Razorpay",
+      "Vercel",
+      "Git",
+    ],
+    icon: FiBriefcase,
+  },
+  {
+    title: "Freelance Projects",
+    position: "Video Editor & Content Designer",
+    date: "Dec 2023 – Dec 2024",
+    location: "Remote, India",
+    content: [
+      "Edited 50+ videos for multiple clients, including YouTube long-form content, Shorts, and Reels.",
+      "Designed around 20+ custom thumbnails for creators to boost click rates and improve their overall channel look.",
+      "Handled everything from rough cuts to final exports while communicating directly with clients to match their creative direction and meet deadlines.",
+    ],
+    techStack: [
+      "Adobe Premiere Pro",
+      "After Effects",
+      "Photoshop",
+      "Canva",
+      "DaVinci Resolve",
+    ],
+    icon: BiMoviePlay,
   },
 ];
+
 const project = [
   {
     title: "Issue Board",
@@ -32,7 +92,14 @@ const project = [
     githubLink: "https://github.com/ayush-khatrii/issue-hub",
     liveLink: "https://issueboard.vercel.app",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=issue-board",
-    techStack: ["React.js", "Nexts.js", "next-auth", "TailwindCSS", "Prisma", "Postgresql"]
+    techStack: [
+      "React.js",
+      "Nexts.js",
+      "next-auth",
+      "TailwindCSS",
+      "Prisma",
+      "Postgresql",
+    ],
   },
   {
     title: "Cab Booking Web App, Shivay Safar",
@@ -40,7 +107,7 @@ const project = [
     githubLink: "https://github.com/ayush-khatrii/discussIt",
     liveLink: "https://shivaysafar.com",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Cab-Booking",
-    techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"]
+    techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"],
   },
   {
     title: "Discuss-It Chat App",
@@ -48,15 +115,25 @@ const project = [
     githubLink: "https://github.com/ayush-khatrii/discussIt",
     liveLink: "https://discussitt.vercel.app",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
-    techStack: ["React.js", "Express.js", "Javascript", "MongoDB", "Node.js", "Socket.io", "TailwindCSS"]
+    techStack: [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "MongoDB",
+      "Node.js",
+      "Socket.io",
+      "TailwindCSS",
+    ],
   },
   {
     title: "Night Node",
     desc: "NightNode - Color Theme for VS Code",
     githubLink: "https://github.com/ayush-khatrii/night-node",
-    liveLink: "https://marketplace.visualstudio.com/items?itemName=AyushKhatri.nightnode",
-    image: "https://raw.githubusercontent.com/ayush-khatrii/night-node/refs/heads/main/images/new-nn-logo.png",
-    techStack: ["JSON"]
+    liveLink:
+      "https://marketplace.visualstudio.com/items?itemName=AyushKhatri.nightnode",
+    image:
+      "https://raw.githubusercontent.com/ayush-khatrii/night-node/refs/heads/main/images/new-nn-logo.png",
+    techStack: ["JSON"],
   },
   {
     title: "Hotel Booking App",
@@ -64,7 +141,15 @@ const project = [
     githubLink: "https://github.com/ayush-khatrii/Hotel-project-FinalYear",
     liveLink: "",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Hotel Booking",
-    techStack: ["React.js", "Express.js", "Javascript", "MongoDB", "Node.js", "TailwindCSS", "RazorPay"]
+    techStack: [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "MongoDB",
+      "Node.js",
+      "TailwindCSS",
+      "RazorPay",
+    ],
   },
   {
     title: "A.I Saas Landing Page",
@@ -72,7 +157,7 @@ const project = [
     githubLink: "https://github.com/ayush-khatrii/saas-landing-page",
     liveLink: "https://insightx-saas.vercel.app",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=sample",
-    techStack: ["Next.js", "TypeScript",]
+    techStack: ["Next.js", "TypeScript"],
   },
 ];
 

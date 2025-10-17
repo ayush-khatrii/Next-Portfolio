@@ -1,86 +1,210 @@
-"use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+"use client"
 
-interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
+import * as React from "react"
+import { Slot } from "radix-ui"
+
+import { cn } from "@/lib/utils"
+
+// Types
+type TimelineContextValue = {
+  activeStep: number
+  setActiveStep: (step: number) => void
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+// Context
+const TimelineContext = React.createContext<TimelineContextValue | undefined>(
+  undefined
+)
 
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
+const useTimeline = () => {
+  const context = React.useContext(TimelineContext)
+  if (!context) {
+    throw new Error("useTimeline must be used within a Timeline")
+  }
+  return context
+}
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
-  });
+// Components
+interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> {
+  defaultValue?: number
+  value?: number
+  onValueChange?: (value: number) => void
+  orientation?: "horizontal" | "vertical"
+}
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+function Timeline({
+  defaultValue = 1,
+  value,
+  onValueChange,
+  orientation = "vertical",
+  className,
+  ...props
+}: TimelineProps) {
+  const [activeStep, setInternalStep] = React.useState(defaultValue)
+
+  const setActiveStep = React.useCallback(
+    (step: number) => {
+      if (value === undefined) {
+        setInternalStep(step)
+      }
+      onValueChange?.(step)
+    },
+    [value, onValueChange]
+  )
+
+  const currentStep = value ?? activeStep
+
+  return (
+    <TimelineContext.Provider
+      value={{ activeStep: currentStep, setActiveStep }}
+    >
+      <div
+        data-slot="timeline"
+        className={cn(
+          "group/timeline flex data-[orientation=horizontal]:w-full data-[orientation=horizontal]:flex-row data-[orientation=vertical]:flex-col",
+          className
+        )}
+        data-orientation={orientation}
+        {...props}
+      />
+    </TimelineContext.Provider>
+  )
+}
+
+// TimelineContent
+function TimelineContent({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      data-slot="timeline-content"
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+    />
+  )
+}
+
+// TimelineDate
+interface TimelineDateProps extends React.HTMLAttributes<HTMLTimeElement> {
+  asChild?: boolean
+}
+
+function TimelineDate({
+  asChild = false,
+  className,
+  ...props
+}: TimelineDateProps) {
+  const Comp = asChild ? Slot.Root : "time"
+
+  return (
+    <Comp
+      data-slot="timeline-date"
+      className={cn(
+        "mb-1 block text-xs font-medium text-muted-foreground group-data-[orientation=vertical]/timeline:max-sm:h-4",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+// TimelineHeader
+function TimelineHeader({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div data-slot="timeline-header" className={cn(className)} {...props} />
+  )
+}
+
+// TimelineIndicator
+interface TimelineIndicatorProps extends React.HTMLAttributes<HTMLDivElement> {
+  asChild?: boolean
+}
+
+function TimelineIndicator({
+  asChild = false,
+  className,
+  children,
+  ...props
+}: TimelineIndicatorProps) {
+  return (
+    <div
+      data-slot="timeline-indicator"
+      className={cn(
+        "absolute size-4 rounded-full border-2 border-primary/20 group-data-completed/timeline-item:border-primary group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:left-0 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:top-0 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:-translate-x-1/2",
+        className
+      )}
+      aria-hidden="true"
+      {...props}
+    >
+      {children}
+    </div>
+  )
+}
+
+// TimelineItem
+interface TimelineItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  step: number
+}
+
+function TimelineItem({ step, className, ...props }: TimelineItemProps) {
+  const { activeStep } = useTimeline()
 
   return (
     <div
-      className="w-full md:px-10"
-      ref={containerRef}
-    >
-      <div ref={ref} className="relative max-w-7xl mx-auto">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex"
-          >
-            <div className="flex flex-col md:flex-row z-40 items-center top-40 self-start md:w-full">
-              <div className="relative left-1 flex items-center justify-center">
-                <div className="absolute w-5 h-5 rounded-full bg-blue-900 blur-md opacity-30"></div>
-                <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_12px_1px_#00f]"></div>
-              </div>
-              <div className="flex items-start gap-4 flex-col pl-20">
-                <h3 className="">
-                  {item.title}
-                </h3>
-                <div>
-                  {item.content}
-                </div>
-              </div>
-            </div>
+      data-slot="timeline-item"
+      className={cn(
+        "group/timeline-item relative flex flex-1 flex-col gap-0.5 group-data-[orientation=horizontal]/timeline:mt-8 group-data-[orientation=horizontal]/timeline:not-last:pe-8 group-data-[orientation=vertical]/timeline:ms-8 group-data-[orientation=vertical]/timeline:not-last:pb-12 has-[+[data-completed]]:[&_[data-slot=timeline-separator]]:bg-primary",
+        className
+      )}
+      data-completed={step <= activeStep || undefined}
+      {...props}
+    />
+  )
+}
 
-            <div className="relative pl-10 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
-              </h3>
+// TimelineSeparator
+function TimelineSeparator({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      data-slot="timeline-separator"
+      className={cn(
+        "absolute self-start bg-primary/10 group-last/timeline-item:hidden group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:h-0.5 group-data-[orientation=horizontal]/timeline:w-[calc(100%-1rem-0.25rem)] group-data-[orientation=horizontal]/timeline:translate-x-4.5 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:h-[calc(100%-1rem-0.25rem)] group-data-[orientation=vertical]/timeline:w-0.5 group-data-[orientation=vertical]/timeline:-translate-x-1/2 group-data-[orientation=vertical]/timeline:translate-y-4.5",
+        className
+      )}
+      aria-hidden="true"
+      {...props}
+    />
+  )
+}
 
-            </div>
-          </div>
-        ))}
-        <div
-          style={{
-            height: height + "px",
-          }}
-          className="absolute md:left-2 left-2 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
-        >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0 left-2 w-[2px] bg-gradient-to-t from-primary via-white  to-transparent from-[0%] via-[10%] rounded-full"
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
+// TimelineTitle
+function TimelineTitle({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLHeadingElement>) {
+  return (
+    <h3
+      data-slot="timeline-title"
+      className={cn("text-sm font-medium", className)}
+      {...props}
+    />
+  )
+}
+
+export {
+  Timeline,
+  TimelineContent,
+  TimelineDate,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+}

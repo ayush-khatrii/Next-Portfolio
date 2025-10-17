@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import {
-  JetBrains_Mono
+  JetBrains_Mono,
+  Geist_Mono
 } from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "@/providers";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import { siteMetadata } from "@/lib/sitemetadata";
+import Footer from "@/components/Footer";
 
-const jetBrains_mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"
+// const jetBrains_mono = JetBrains_Mono({
+//   subsets: ['latin'],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"
 
-  ]
-});
+//   ]
+// });
+
+// const geist_mono = Geist_Mono({
+//   subsets: ['latin'],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"]
+// });
 
 
 export const metadata = siteMetadata;
@@ -25,18 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${jetBrains_mono.className} ${jetBrains_mono.className} antialiased`}
-      >
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
         >
-          <main className="max-w-5xl md:mx-auto px-5">
-            <div className='mb-20 z-[300]'>
+          <main className="">
+            <div className='mb-20  z-[300]'>
               <Navbar />
             </div>
-            {children}
+            <div className="max-w-3xl md:mx-auto px-5">
+              {children}
+              <Footer />
+            </div>
           </main>
           <Toaster position="top-center" />
         </ThemeProvider>

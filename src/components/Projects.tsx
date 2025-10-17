@@ -10,12 +10,12 @@ import { ArrowRight } from "lucide-react";
 
 const Projects = () => {
   return (
-    <section className="py-10">
+    <section className="pt-10">
       <div>
         <h1 className="text-3xl font-bold my-2 mb-10">Projects</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {project.slice(0, 3).map((item, idx) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -24,18 +24,10 @@ const Projects = () => {
             key={idx}
             className="rounded-md overflow-hidden border border-foreground/15 flex flex-col"
           >
-            <div className="aspect-video overflow-hidden">
-              <img
-                src={item.image || "https://placehold.co/1280x720/1a1a1a/ffffff?text=Project"}
-                alt={`${item.title}-thumbnail`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
             <div className="p-5 flex flex-col flex-grow">
-              <h2 className="text-lg font-medium mb-1">{item.title}</h2>
+              <h2 className="text-xl font-medium mb-1">{item.title}</h2>
 
-              <p className="text-sm line-clamp-2 leading-relaxed font-light opacity-80 mb-6 flex-grow">
+              <p className=" text-base md:text-lg line-clamp-2 font-normal text-muted-foreground mb-6 flex-grow">
                 {item.desc}
               </p>
               <motion.div
@@ -50,7 +42,7 @@ const Projects = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: techIdx * 0.1 }}
                     >
-                      <Badge variant="outline" className="rounded-md text-xs border text-foreground/85">
+                      <Badge variant="secondary" className="text-xs border text-foreground/85">
                         {tech}
                       </Badge>
                     </motion.div>
