@@ -19,7 +19,7 @@ const badgeClassName =
 const ProjectRepository = ({ items }: { items: ProjectItem[] }) => (
   <Accordion
     type="multiple"
-    className="grid grid-cols-1 items-start border-l border-t border-dotted border-border/50 lg:grid-cols-2"
+    className="grid grid-cols-1 items-start border-l border-t border-dotted border-border/50"
   >
     {items.map((item, index) => (
       <AccordionItem

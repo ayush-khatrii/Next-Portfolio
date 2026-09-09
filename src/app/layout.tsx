@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import { siteMetadata } from "@/lib/sitemetadata";
 import Footer from "@/components/Footer";
+import { getCurrentYear } from "@/lib/current-year";
 import { DM_Mono } from "next/font/google";
 
 const dm_mono = DM_Mono({
@@ -14,11 +15,13 @@ const dm_mono = DM_Mono({
 
 export const metadata = siteMetadata;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentYear = await getCurrentYear();
+
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${dm_mono.className} `}>
@@ -33,7 +36,7 @@ export default function RootLayout({
             <div className="w-full sm:px-4">
               <div className="relative mx-auto min-h-screen w-full max-w-6xl border-border pt-24 md:border-x md:border-dashed">
                 {children}
-                <Footer />
+                <Footer currentYear={currentYear} />
               </div>
             </div>
           </main>

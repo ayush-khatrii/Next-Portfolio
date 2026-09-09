@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-
-  }
+  cacheComponents: true,
+  partialPrefetching: true,
 };
 
 export default nextConfig;

@@ -1,13 +1,9 @@
-"use client";
-
-import { motion } from "motion/react";
+import Age from "@/components/AgeSlot";
 import Link from "next/link";
 import { Code2, ExternalLink, Globe2, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import SectionHeading from "@/components/SectionHeading";
-
-const birthYear = 2003;
 
 const infoData = [
   { icon: Mail, label: "Email", value: "ayushkhatri.dev@gmail.com", href: "mailto:ayushkhatri.dev@gmail.com" },
@@ -17,16 +13,13 @@ const infoData = [
 ];
 
 const About = () => {
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - birthYear;
-
   return (
     <section id="about" className="scroll-mt-24 overflow-x-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <SectionHeading title="About Me" description="" />
       <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.17fr)_minmax(20rem,0.85fr)] lg:gap-10">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="">
+        <div>
           <p className="max-w-full text-pretty text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Hey there! I’m <span className="font-medium text-foreground">Ayush Khatri</span>, a {age}-year-old passionate <code className="rounded border border-border/60 bg-muted/70 px-1.5 py-0.5 font-mono text-[0.88em] font-medium text-foreground">Full-Stack Web Developer</code>. Passionate about crafting dynamic, responsive, and user-centric web apps. Always learning, always building — one project at a time.
+            Hey there! I’m <span className="font-medium text-foreground">Ayush Khatri</span>, a <Age />-year-old passionate <code className="rounded border border-border/60 bg-muted/70 px-1.5 py-0.5 font-mono text-[0.88em] font-medium text-foreground">Full-Stack Web Developer</code>. Passionate about crafting dynamic, responsive, and user-centric web apps. Always learning, always building — one project at a time.
           <br /><br />
             <span className="font-normal">Beyond coding, I enjoy editing and refining content that tells stories and connects ideas beautifully. I&apos;m constantly exploring new technologies and improving my skills to build impactful projects that make a difference.</span>
           </p>
@@ -40,9 +33,9 @@ const About = () => {
               <Link href="https://github.com/ayush-khatrii" target="_blank" rel="noopener noreferrer">Resume <ExternalLink /></Link>
             </Button>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="border-y border-dotted border-border/60">
+        <div className="border-y border-dotted border-border/60">
           <Table className="table-fixed">
             <TableBody>
               {infoData.map((item) => {
@@ -59,7 +52,7 @@ const About = () => {
               })}
             </TableBody>
           </Table>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

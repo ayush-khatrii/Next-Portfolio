@@ -13,7 +13,7 @@ const socials = [
   { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/ayush.khatrii" },
 ];
 
-const Footer = () => (
+const Footer = ({ currentYear }: { currentYear: number }) => (
   <footer className="relative border-t border-dotted border-border/60 pb-6">
     <div
       aria-hidden="true"
@@ -52,7 +52,7 @@ const Footer = () => (
       <TextPressure text="Ayush Khatri" flex alpha={false} stroke width weight textColor="currentColor" strokeColor="currentColor" className="text-foreground" />
     </div>
     <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative z-10 mt-4 text-center font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground/70">
-      © {new Date().getFullYear()} Crafted with ❤️ and curiosity.
+      © {currentYear} Crafted with ❤️ and curiosity.
     </motion.p>
   </footer>
 );

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import DraggableGallery, { type GalleryImage } from "@/components/DraggableGallery";
@@ -30,7 +31,7 @@ const collectImages = async (directory: string, root = directory): Promise<Galle
   return images.flat();
 };
 
-const GalleryPage = async () => {
+const GalleryContent = async () => {
   const publicDirectory = path.join(process.cwd(), "public");
   const images = (await collectImages(publicDirectory)).sort((first, second) => {
     if (first.src === "/profile-pic.png") return -1;
@@ -38,12 +39,23 @@ const GalleryPage = async () => {
     return first.src.localeCompare(second.src);
   });
 
-  return (
-    <section className="min-h-[70svh] overflow-x-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
-      <SectionHeading title="Gallery" description="A visual collection of moments, interests, and work beyond the code." />
-      <DraggableGallery images={images} />
-    </section>
-  );
+  return <DraggableGallery images={images} />;
 };
+
+const GalleryFallback = () => (
+  <div
+    aria-label="Loading gallery"
+    className="min-h-[34rem] w-full animate-pulse border-y border-border/40 bg-muted/10 sm:min-h-[44rem] lg:min-h-[48rem]"
+  />
+);
+
+const GalleryPage = () => (
+  <section className="min-h-[70svh] overflow-x-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+    <SectionHeading title="Gallery" description="A visual collection of moments, interests, and work beyond the code." />
+    <Suspense fallback={<GalleryFallback />}>
+      <GalleryContent />
+    </Suspense>
+  </section>
+);
 
 export default GalleryPage;

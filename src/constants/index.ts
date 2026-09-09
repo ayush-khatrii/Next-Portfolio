@@ -115,6 +115,52 @@ const work: WorkItem[] = [
 
 const project = [
   {
+    "title": "LessonMap",
+    "desc": "A full-stack AI-powered course creation platform that helps educators turn ideas into structured, shareable learning experiences with drag-and-drop curriculum building, resource management, learner progress tracking, and subscription-based premium features.",
+    "githubLink": "https://github.com/ayush-khatrii/Lesson-Map",
+    "liveLink": "https://lessonmap.vercel.app",
+    "image": "https://raw.githubusercontent.com/ayush-khatrii/Lesson-Map/main/docs/screenshots/home.png",
+    "techStack": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Better Auth",
+      "TailwindCSS",
+      "DeepSeek AI",
+      "Cloudflare R2",
+      "Dodo Payments",
+      "dnd-kit"
+    ]
+  },
+  {
+    "title": "QChat — Real-Time Room-Based Chat",
+    "desc": "Built a real-time room-based chat platform with custom room codes, instant messaging, typing indicators, online presence, paginated message history, Google OAuth, and background push notifications via FireBase (FCM)",
+    "githubLink": "https://github.com/ayush-khatrii/q-chat",
+    "liveLink": "",
+    "image": "https://placehold.co/1280x720/1a1a1a/ffffff?text=QChat",
+    "techStack": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Ably",
+      "Better Auth",
+      "Prisma",
+      "PostgreSQL",
+      "Firebase Cloud Messaging",
+      "TailwindCSS"
+    ]
+  },
+  {
+    title: "Cab Booking Web App, Shivay Safar",
+    desc: "Developed a cab booking platform with dynamic pricing and vehicle filtering based on user-selected routes. Improved user experience through smart logic and clean, responsive UI.",
+    githubLink: "https://github.com/ayush-khatrii/discussIt",
+    liveLink: "https://shivaysafar.com",
+    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Cab-Booking",
+    techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"],
+  },
+  {
     title: "Issue Board",
     desc: "Engineered a comprehensive full-stack issue tracking system with GitHub OAuth",
     githubLink: "https://github.com/ayush-khatrii/issue-hub",
@@ -127,30 +173,6 @@ const project = [
       "TailwindCSS",
       "Prisma",
       "Postgresql",
-    ],
-  },
-  {
-    title: "Cab Booking Web App, Shivay Safar",
-    desc: "Developed a cab booking platform with dynamic pricing and vehicle filtering based on user-selected routes. Improved user experience through smart logic and clean, responsive UI.",
-    githubLink: "https://github.com/ayush-khatrii/discussIt",
-    liveLink: "https://shivaysafar.com",
-    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Cab-Booking",
-    techStack: ["React.js", "Next.js", "TailwindCSS", "TypeScript"],
-  },
-  {
-    title: "Discuss-It Chat App",
-    desc: "Discuss-It is a chat app that lets users message in real time, manage friend requests, share files, and create groups. It's designed to make communication easy and interactive. Stay connected and collaborate with ease!",
-    githubLink: "https://github.com/ayush-khatrii/discussIt",
-    liveLink: "https://discussitt.vercel.app",
-    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
-    techStack: [
-      "React.js",
-      "Express.js",
-      "Javascript",
-      "MongoDB",
-      "Node.js",
-      "Socket.io",
-      "TailwindCSS",
     ],
   },
   {
@@ -186,6 +208,22 @@ const project = [
     liveLink: "https://insightx-saas.vercel.app",
     image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=sample",
     techStack: ["Next.js", "TypeScript"],
+  },
+  {
+    title: "Discuss-It Chat App",
+    desc: "Discuss-It is a chat app that lets users message in real time, manage friend requests, share files, and create groups. It's designed to make communication easy and interactive. Stay connected and collaborate with ease!",
+    githubLink: "https://github.com/ayush-khatrii/discussIt",
+    liveLink: "https://discussitt.vercel.app",
+    image: "https://placehold.co/1280x720/1a1a1a/ffffff?text=Chat-App",
+    techStack: [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "MongoDB",
+      "Node.js",
+      "Socket.io",
+      "TailwindCSS",
+    ],
   },
 ];
 

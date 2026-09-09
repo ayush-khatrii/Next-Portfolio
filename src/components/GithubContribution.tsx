@@ -6,12 +6,15 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import { motion } from "motion/react";
 import SectionHeading from "@/components/SectionHeading";
 
-const formatDate = (dateString: string) => new Intl.DateTimeFormat("en-US", {
-  day: "2-digit",
-  month: "short",
-  year: "numeric",
-  weekday: "short",
-}).format(new Date(dateString));
+const formatDate = (dateString: string) => {
+  const [year, month, day] = dateString.split("-");
+  const monthName = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  ][Number(month) - 1];
+
+  return `${monthName} ${day}, ${year}`;
+};
 
 const GithubContribution = () => (
   <section className="overflow-x-hidden border-t border-dotted border-border/60 px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
