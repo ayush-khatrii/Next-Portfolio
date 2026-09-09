@@ -55,11 +55,12 @@ const Navbar = () => {
               className="group flex min-h-11 items-center gap-2.5 font-mono text-xs font-medium tracking-tight"
               aria-label="Ayush Khatri — Home"
             >
-              <span className="flex size-8 items-center justify-center rounded-md border border-primary/40 bg-primary/10 text-primary transition-transform duration-200 group-hover:scale-105">
-                <Terminal className="size-3.5" aria-hidden="true" />
+              <span className="flex size-8 items-center justify-center rounded-md border border-primary/40 bg-primary/10 dark:text-primary text-foreground transition-transform duration-200 group-hover:scale-105">
+                {/* <Terminal className="size-3.5" aria-hidden="true" /> */}
+                AK
               </span>
               <span>
-                AK<span className="text-muted-foreground">.DEV</span>
+
               </span>
             </Link>
           </div>

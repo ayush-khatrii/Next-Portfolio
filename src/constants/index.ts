@@ -2,6 +2,23 @@ import { FiBriefcase } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { BiMoviePlay } from "react-icons/bi";
 
+export const aboutContent = {
+  greeting: "Hey! I’m",
+  name: "Ayush Khatri",
+  role: "Full-Stack Web Developer",
+  introduction:
+    "I like building web apps, experimenting with new tech, and figuring out better ways to make things work. Most of my time goes into working on projects, fixing what breaks, improving what feels off, and learning something new along the way.",
+  interests:
+    "I also enjoy editing content and videos, especially the small details that make the final result feel cleaner, sharper, and more put together.",
+};
+
+export const aboutInfo = [
+  { icon: "mail", label: "Email", value: "ayushkhatri.dev@gmail.com", href: "mailto:ayushkhatri.dev@gmail.com" },
+  { icon: "website", label: "Website", value: "ayushkhatri.in", href: "https://ayushkhatri.in" },
+  { icon: "location", label: "Location", value: "India 🇮🇳" },
+  { icon: "role", label: "Role", value: "Full-Stack Developer" },
+];
+
 const skills = [
   {
     category: "Languages",

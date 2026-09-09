@@ -1,4 +1,4 @@
-import About from "@/components/About";
+import AboutPage from "@/components/AboutPage";
 import EducationTimeline from "@/components/EducationTimeline";
 import GithubContribution from "@/components/GithubContributionSlot";
 
@@ -23,7 +23,7 @@ const education = [
 
 const Page = () => (
   <div className="overflow-x-hidden">
-    <About />
+    <AboutPage />
     <EducationTimeline items={education} />
     <GithubContribution />
   </div>
